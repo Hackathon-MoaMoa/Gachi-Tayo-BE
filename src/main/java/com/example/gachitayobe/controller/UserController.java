@@ -15,6 +15,6 @@ public class UserController {
     @PutMapping("/signup")
     public int insertUser(@RequestBody UserDto userDto){
         userService.insertUser(userDto);
-        return userDto.getU_id();
+        return userDto.getUId();
     }
 }
