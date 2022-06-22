@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.gachitayobe.mapper.PostMapper">
+
+    <sql id="postColumns">
+        p_id
+        , u_id
+		, start_x
+        , start_y
+		, start_address
+		, start_name
+        , end_x
+        , end_y
+		, end_address
+		, end_name
+        , start_date
+        , total_member
+        , current_member
+        , done
+    </sql>
+
+    <insert id="insertPost" parameterType="PostDto">
+        INSERT INTO POST (
+        <include refid="postColumns" />
+        ) VALUES (
+        NULL
+        , uId
+        , startX
+        , startY
+        , startAddress
+        , startName
+        , endX
+        , endY
+        , endAddress
+        , endName
+        , startDate
+        , totalMember
+        , currentMember
+        , done
+        )
+    </insert>
+
+
+</mapper>
