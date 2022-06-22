@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 public class UserDto {
-    private int u_id;
+    private int uId;
     private String id;
     private String password;
     private int gender;
@@ -16,7 +16,7 @@ public class UserDto {
     @Override
     public String toString() {
         return "UserDto{" +
-                "u_id=" + u_id +
+                "uId=" + uId +
                 ", id='" + id + '\'' +
                 ", password='" + password + '\'' +
                 ", gender=" + gender +
