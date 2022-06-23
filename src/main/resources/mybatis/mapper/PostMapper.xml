@@ -28,19 +28,19 @@
         <include refid="postColumns" />
         ) VALUES (
         NULL
-        , uId
-        , startX
-        , startY
-        , startAddress
-        , startName
-        , endX
-        , endY
-        , endAddress
-        , endName
-        , startDate
-        , totalMember
-        , currentMember
-        , done
+        , #{uId}
+        , #{startX}
+        , #{startY}
+        , #{startAddress}
+        , #{startName}
+        , #{endX}
+        , #{endY}
+        , #{endAddress}
+        , #{endName}
+        , #{startDate}
+        , #{totalMember}
+        , #{currentMember}
+        , #{done}
         )
     </insert>
 
@@ -62,9 +62,13 @@
         select *,(6371*acos(cos(radians(#{startY}))*cos(radians(start_y))*cos(radians(start_x)-radians(#{startX}))
         +sin(radians(#{startY}))*sin(radians(start_y)))) AS distance
         , (6371*acos(cos(radians(#{endY}))*cos(radians(end_y))*cos(radians(end_x)-radians(#{endX}))
-        +sin(radians(#{endY}))*sin(radians(end_y)))) AS distancea
+        +sin(radians(#{endY}))*sin(radians(end_y)))) AS distance
         from POST
-        having distance <![CDATA[ <= ]]> #{radius} and distancea <![CDATA[ <= ]]> #{radius};
+        having distance <![CDATA[ <= ]]> #{radius} and distance <![CDATA[ <= ]]> #{radius};
+    </select>
+
+    <select id="postWrite" parameterType="PostXYDto">
+        SELECT * FROM POST
     </select>
 
 </mapper>
