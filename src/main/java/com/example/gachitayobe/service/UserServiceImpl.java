@@ -2,6 +2,7 @@ package com.example.gachitayobe.service;
 
 import com.example.gachitayobe.dto.UserDto;
 import com.example.gachitayobe.dto.UserLoginDto;
+import com.example.gachitayobe.dto.UserRatingDto;
 import com.example.gachitayobe.mapper.UserMapper;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
@@ -65,6 +66,11 @@ public class UserServiceImpl implements UserService{
             return -1;
         else
             return tempLoginUserDto.getUId();
+    }
+
+    public int plus_score(UserRatingDto userRatingDto) {
+        int ratingScore = userMapper.plus_score(userRatingDto);
+        return ratingScore;
     }
 
 }

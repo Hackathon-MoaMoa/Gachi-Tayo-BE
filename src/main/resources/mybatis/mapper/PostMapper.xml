@@ -22,24 +22,24 @@
         , done
     </sql>
 
-    <insert id="insertPost" parameterType="PostDto">
+    <insert id="postWrite" parameterType="PostDto">
         INSERT INTO POST (
         <include refid="postColumns" />
         ) VALUES (
         NULL
-        , uId
-        , startX
-        , startY
-        , startAddress
-        , startName
-        , endX
-        , endY
-        , endAddress
-        , endName
-        , startDate
-        , totalMember
-        , currentMember
-        , done
+        , #{uId}
+        , #{startX}
+        , #{startY}
+        , #{startAddress}
+        , #{startName}
+        , #{endX}
+        , #{endY}
+        , #{endAddress}
+        , #{endName}
+        , #{startDate}
+        , #{totalMember}
+        , #{currentMember}
+        , #{done}
         )
     </insert>
 
@@ -52,5 +52,20 @@
     <select id="getRemainSeat" parameterType="int" resultType="int">
         SELECT seat_number FROM SEAT_NUMBER WHERE seat_number not in (SELECT seat_number FROM MEMBER WHERE p_id=#{p_id});
     </select>
+
+    <select id="getSearchedPosts" parameterType="PostXYDto" resultType="PostDto">
+        select *,(6371*acos(cos(radians(#{startY}))*cos(radians(start_y))*cos(radians(start_x)-radians(#{startX}))
+        +sin(radians(#{startY}))*sin(radians(start_y)))) AS distance
+        , (6371*acos(cos(radians(#{endY}))*cos(radians(end_y))*cos(radians(end_x)-radians(#{endX}))
+        +sin(radians(#{endY}))*sin(radians(end_y)))) AS distance
+        from POST
+    </select>
+    <!--
+        <update id="postWrite" parameterType="int">
+            UPDATE POST
+             set startX = 아직 못채움
+        WHERE startAddress = #{startAddress} and endAddress = #{endAddress}
+    </update>
+    -->
 
 </mapper>

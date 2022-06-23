@@ -3,6 +3,7 @@ package com.example.gachitayobe.controller;
 import com.example.gachitayobe.dto.PhoneDto;
 import com.example.gachitayobe.dto.UserDto;
 import com.example.gachitayobe.dto.UserLoginDto;
+import com.example.gachitayobe.dto.UserRatingDto;
 import com.example.gachitayobe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +36,11 @@ public class UserController {
     @PostMapping("api/user/login")
     public int loginUser(@RequestBody UserLoginDto userLoginDto){
         return userService.checkUser(userLoginDto);
+    }
+
+    @PostMapping("/api/user/likes")
+    public int userRating(@RequestBody UserRatingDto userRatingDto) {
+        userService.plus_score(userRatingDto);
+        return userRatingDto.getPlus_score();
     }
 }
