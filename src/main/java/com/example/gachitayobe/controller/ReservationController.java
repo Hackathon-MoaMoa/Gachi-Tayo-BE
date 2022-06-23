@@ -35,4 +35,13 @@ public class ReservationController {
         }
     }
 
+    @GetMapping("/api/reservation/history/done/{u_id}")
+    public List<ReservationHistoryDto> getReservationHistoryDone(@PathVariable("u_id") int u_id){
+        try {
+            return reservationService.getReservationHistoryDone(u_id);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
 }

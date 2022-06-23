@@ -34,8 +34,21 @@
                DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') as start_date,
                done
         FROM POST
-        WHERE p_id in (SELECT p_id FROM MEMBER WHERE u_id=#{u_id})
-        ORDER BY created_at desc;
+        WHERE p_id in (SELECT p_id FROM MEMBER WHERE u_id=#{u_id}) and POST.start_date >= now()
+        ORDER BY created_at desc
+    </select>
+
+    <select id="getReservationHistoryDone" parameterType="int" resultType="reservationHistoryDto">
+        SELECT p_id,
+               start_address,
+               start_name,
+               end_address,
+               end_name,
+               DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') as start_date,
+               done
+        FROM POST
+        WHERE p_id in (SELECT p_id FROM MEMBER WHERE u_id=#{u_id}) and not POST.start_date >= now()
+        ORDER BY created_at desc
     </select>
 
     <select id="getReservationUserInfo" parameterType="int" resultType="reservationUserDto">

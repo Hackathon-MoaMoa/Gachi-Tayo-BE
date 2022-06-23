@@ -8,4 +8,5 @@ import java.util.List;
 public interface ReservationService {
     boolean createReservation(ReservationDto reservationDto);
     List<ReservationHistoryDto> getReservationHistory(int u_id);
+    List<ReservationHistoryDto> getReservationHistoryDone(int u_id);
 }
