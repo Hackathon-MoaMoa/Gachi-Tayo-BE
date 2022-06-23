@@ -4,5 +4,7 @@ import com.example.gachitayobe.dto.UserDto;
 
 public interface UserService {
     int insertUser(UserDto userDto);
+    String sendCertificationMessage(String phone);
+
 
 }
