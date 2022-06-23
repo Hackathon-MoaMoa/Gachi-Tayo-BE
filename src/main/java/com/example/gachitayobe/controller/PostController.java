@@ -2,7 +2,6 @@ package com.example.gachitayobe.controller;
 
 import com.example.gachitayobe.dto.PostDto;
 import com.example.gachitayobe.dto.PostSearchDto;
-import com.example.gachitayobe.dto.ReservationDto;
 import com.example.gachitayobe.service.PostSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -38,13 +37,6 @@ public class PostController {
         return postService.getRemainSeat(p_id);
     }
 
-<<<<<<< HEAD
-    @PostMapping("/api/posts/write")
-    public void postWrite(PostDto postDto) {
-        postService.postWrite(postDto);
-    }
-
-=======
     @GetMapping("api/posts")
     public List<PostDto> getPosts(PostSearchDto postSearchDto){
         if (postSearchDto.getStartAddress()==null && postSearchDto.getEndAddress()==null){
@@ -55,5 +47,9 @@ public class PostController {
         }
 
     }
->>>>>>> 858bf2eceda4f2bf1cf45e586f73e743a2bbd36f
+
+    @PostMapping("/api/posts/write")
+    public void postWrite(PostDto postDto) {
+        postService.postWrite(postDto);
+    }
 }
