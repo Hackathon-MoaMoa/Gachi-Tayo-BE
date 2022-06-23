@@ -27,6 +27,9 @@
         , #{name}
         , #{score}
         )
+        <selectKey keyProperty="uId" resultClass="Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
     </insert>
 
     <select id="checkUser" parameterType="UserLoginDto" resultType="UserDto">
