@@ -29,8 +29,7 @@ public class PostServiceImpl implements PostService {
 
     public List<PostDto> getAllPosts(){ return postMapper.getAllPosts(); }
 
-    public void postWrite(@RequestBody PostDto postDto) {
+    public void postWrite(PostDto postDto) {
         postMapper.postWrite(postDto);
     }
-
 }

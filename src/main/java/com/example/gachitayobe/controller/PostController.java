@@ -49,7 +49,8 @@ public class PostController {
     }
 
     @PostMapping("/api/posts/write")
-    public void postWrite(PostDto postDto) {
+    public void postWrite(@RequestBody PostDto postDto) {
+//        System.out.println(postDto);
         postService.postWrite(postDto);
     }
 }

@@ -6,8 +6,9 @@
 <mapper namespace="com.example.gachitayobe.mapper.PostMapper">
 
     <sql id="postColumns">
-        p_id
-        , u_id
+        u_id
+        ,title
+        ,content
 		, start_x
         , start_y
 		, start_address
@@ -18,29 +19,25 @@
 		, end_name
         , start_date
         , total_member
-        , current_member
-        , done
-        , created_at
     </sql>
 
-    <insert id="insertPost" parameterType="PostDto">
+    <insert id="postWrite" parameterType="PostDto">
         INSERT INTO POST (
         <include refid="postColumns" />
         ) VALUES (
-        NULL
-        , #{uId}
-        , #{startX}
-        , #{startY}
+        #{uId}
+        ,'test'
+        ,'test'
+        , 3
+        , 3
         , #{startAddress}
         , #{startName}
-        , #{endX}
-        , #{endY}
+        ,3
+        ,4
         , #{endAddress}
         , #{endName}
         , #{startDate}
         , #{totalMember}
-        , #{currentMember}
-        , #{done}
         )
     </insert>
 
