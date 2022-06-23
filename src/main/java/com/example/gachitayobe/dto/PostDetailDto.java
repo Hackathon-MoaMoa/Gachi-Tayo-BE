@@ -7,6 +7,8 @@ import java.sql.Timestamp;
 @Getter
 public class PostDetailDto {
     private int uId;
+    private String name;
+    private int score;
     private int pId;
     private double startX;
     private double startY;
@@ -16,7 +18,12 @@ public class PostDetailDto {
     private double endY;
     private String endAddress;
     private String endName;
-    private String startDate;
+    private String year;
+    private String month;
+    private String day;
+    private String time;
+    private String hour;
+    private String minute;
     private int totalMember;
     private int remainMember;
     private int done;
