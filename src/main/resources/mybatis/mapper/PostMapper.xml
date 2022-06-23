@@ -20,6 +20,7 @@
         , total_member
         , current_member
         , done
+        , created_at
     </sql>
 
     <insert id="insertPost" parameterType="PostDto">
@@ -51,6 +52,19 @@
 
     <select id="getRemainSeat" parameterType="int" resultType="int">
         SELECT seat_number FROM SEAT_NUMBER WHERE seat_number not in (SELECT seat_number FROM MEMBER WHERE p_id=#{p_id});
+    </select>
+
+    <select id="getAllPosts" resultType="PostDto">
+        SELECT * FROM POST order by created_at desc ;
+    </select>
+
+    <select id="getSearchedPosts" parameterType="PostXYDto" resultType="PostDto">
+        select *,(6371*acos(cos(radians(#{startY}))*cos(radians(start_y))*cos(radians(start_x)-radians(#{startX}))
+        +sin(radians(#{startY}))*sin(radians(start_y)))) AS distance
+        , (6371*acos(cos(radians(#{endY}))*cos(radians(end_y))*cos(radians(end_x)-radians(#{endX}))
+        +sin(radians(#{endY}))*sin(radians(end_y)))) AS distancea
+        from POST
+        having distance <![CDATA[ <= ]]> #{radius} and distancea <![CDATA[ <= ]]> #{radius};
     </select>
 
 </mapper>

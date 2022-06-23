@@ -1,14 +1,21 @@
 package com.example.gachitayobe.dto;
 
-import lombok.Getter;
+import lombok.Data;
 
-import java.sql.Timestamp;
 
-@Getter
+
+@Data
 public class PostSearchDto {
     private String startAddress;
-    private String startName;
     private String endAddress;
-    private String endName;
-    private Timestamp startDate;
+    private int radius;
+
+    @Override
+    public String toString() {
+        return "PostSearchDto{" +
+                "startAddress='" + startAddress + '\'' +
+                ", endAddress='" + endAddress + '\'' +
+                ", radius=" + radius +
+                '}';
+    }
 }

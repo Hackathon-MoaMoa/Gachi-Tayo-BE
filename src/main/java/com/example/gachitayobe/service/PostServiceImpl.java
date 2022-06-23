@@ -1,6 +1,8 @@
 package com.example.gachitayobe.service;
 
 import com.example.gachitayobe.dto.PostDetailDto;
+import com.example.gachitayobe.dto.PostDto;
+import com.example.gachitayobe.dto.PostSearchDto;
 import com.example.gachitayobe.mapper.PostMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,4 +25,7 @@ public class PostServiceImpl implements PostService {
     public List<Integer> getRemainSeat(int p_id){
         return postMapper.getRemainSeat(p_id);
     }
+
+    public List<PostDto> getAllPosts(){ return postMapper.getAllPosts(); }
+
 }
