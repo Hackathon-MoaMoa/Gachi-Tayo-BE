@@ -29,5 +29,9 @@
         )
     </insert>
 
+    <select id="checkUser" parameterType="UserLoginDto" resultType="UserDto">
+        SELECT * FROM USER WHERE id=#{id} and password=#{password}
+    </select>
+
 
 </mapper>

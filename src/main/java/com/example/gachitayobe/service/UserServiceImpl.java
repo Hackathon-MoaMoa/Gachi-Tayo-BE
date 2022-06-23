@@ -1,6 +1,7 @@
 package com.example.gachitayobe.service;
 
 import com.example.gachitayobe.dto.UserDto;
+import com.example.gachitayobe.dto.UserLoginDto;
 import com.example.gachitayobe.mapper.UserMapper;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
@@ -57,4 +58,13 @@ public class UserServiceImpl implements UserService{
 
         return certificationNum;
     }
+
+    public int checkUser(UserLoginDto userLoginDto) {
+        UserDto tempLoginUserDto = userMapper.checkUser(userLoginDto);
+        if (tempLoginUserDto == null)
+            return -1;
+        else
+            return tempLoginUserDto.getUId();
+    }
+
 }
