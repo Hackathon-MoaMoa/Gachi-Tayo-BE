@@ -1,5 +1,7 @@
 package com.example.gachitayobe.controller;
 
+import com.example.gachitayobe.dto.PostDto;
+import com.example.gachitayobe.dto.PostSearchDto;
 import com.example.gachitayobe.service.PostSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,4 +36,5 @@ public class PostController {
     public List<Integer> getRemainSeat(@PathVariable("p_id") int p_id){
         return postService.getRemainSeat(p_id);
     }
+
 }

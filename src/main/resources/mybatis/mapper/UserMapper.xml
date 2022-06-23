@@ -25,7 +25,7 @@
         , #{gender}
         , #{phone}
         , #{name}
-        , #{score}
+        , 30
         )
         <selectKey keyProperty="uId" resultType="int">
             SELECT LAST_INSERT_ID()
