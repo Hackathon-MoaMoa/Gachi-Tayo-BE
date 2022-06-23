@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService{
 
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("to", phone);  // 수신전화번호
-        params.put("from", "01090604074"); // 발신전화번호
+        params.put("from", "01090491765"); // 발신전화번호
         params.put("type", "SMS");
         params.put("text", "가치타요 휴대폰인증 메시지 : 인증번호는" + "["+certificationNum+"]" + "입니다.");
         params.put("app_version", "test app 1.2"); // application name and version
