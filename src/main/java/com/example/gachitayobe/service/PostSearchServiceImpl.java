@@ -105,7 +105,6 @@ public class PostSearchServiceImpl implements PostSearchService {
         postXYDto.setEndX(coordinate.get(2));
         postXYDto.setEndY(coordinate.get(3));
         postXYDto.setRadius(postSearchDto.getRadius());
-        System.out.println(postXYDto);
         return postMapper.getSearchedPosts(postXYDto);
     }
 

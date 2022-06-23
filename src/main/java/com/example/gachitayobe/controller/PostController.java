@@ -39,7 +39,6 @@ public class PostController {
 
     @GetMapping("api/posts")
     public List<PostDto> getPosts(PostSearchDto postSearchDto){
-        System.out.println(postSearchDto.toString());
         if (postSearchDto.getStartAddress()==null && postSearchDto.getEndAddress()==null){
             return postService.getAllPosts();
         }
