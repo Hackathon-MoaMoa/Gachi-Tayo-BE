@@ -89,4 +89,14 @@ public class ReservationServiceImpl implements ReservationService{
         }
         return result;
     }
+    public List<ReservationHistoryDto> getReservationHistoryDone(int u_id){
+        List<ReservationHistoryDto> result = reservationMapper.getReservationHistoryDone(u_id);
+        for(int i=0; i<result.size(); i++){
+            ReservationHistoryDto history = result.get(i);
+            history.setUserList(reservationMapper.getReservationUserInfo(history.getPId()));
+            result.set(i, history);
+        }
+        return result;
+    }
+
 }
