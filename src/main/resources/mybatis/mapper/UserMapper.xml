@@ -27,7 +27,7 @@
         , #{name}
         , #{score}
         )
-        <selectKey keyProperty="uId" resultClass="Integer">
+        <selectKey keyProperty="uId" resultType="int">
             SELECT LAST_INSERT_ID()
         </selectKey>
     </insert>

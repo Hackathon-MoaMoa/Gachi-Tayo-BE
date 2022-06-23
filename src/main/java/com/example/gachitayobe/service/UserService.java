@@ -7,6 +7,4 @@ public interface UserService {
     int insertUser(UserDto userDto);
     String sendCertificationMessage(String phone);
     int checkUser(UserLoginDto userLoginDto);
-
-
 }
