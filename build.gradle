@@ -27,6 +27,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'net.nurigo', name: 'javaSDK', version: '2.2'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    implementation 'com.konghq:unirest-java:3.13.10'
+
 }
 
 tasks.named('test') {
