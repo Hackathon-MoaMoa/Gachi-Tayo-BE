@@ -25,4 +25,23 @@
         select EXISTS(SELECT * FROM MEMBER WHERE p_id=#{p_id} and u_id=#{u_id}) as exist;
     </select>
 
+    <select id="getReservationHistory" parameterType="int" resultType="reservationHistoryDto">
+        SELECT p_id,
+               start_address,
+               start_name,
+               end_address,
+               end_name,
+               DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') as start_date,
+               done
+        FROM POST
+        WHERE p_id in (SELECT p_id FROM MEMBER WHERE u_id=#{u_id})
+        ORDER BY created_at desc;
+    </select>
+
+    <select id="getReservationUserInfo" parameterType="int" resultType="reservationUserDto">
+        SELECT U.u_id, name, seat_number
+        FROM MEMBER M
+                 INNER JOIN USER U on U.u_id = M.u_id
+        WHERE p_id = #{p_id}
+    </select>
 </mapper>

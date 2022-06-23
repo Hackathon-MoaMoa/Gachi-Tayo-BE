@@ -1,11 +1,12 @@
 package com.example.gachitayobe.controller;
 
 import com.example.gachitayobe.dto.ReservationDto;
+import com.example.gachitayobe.dto.ReservationHistoryDto;
 import com.example.gachitayobe.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class ReservationController {
@@ -16,4 +17,15 @@ public class ReservationController {
     public boolean createReservation(@RequestBody ReservationDto reservationDto){
         return reservationService.createReservation(reservationDto);
     }
+
+    @GetMapping("/api/reservation/history/{u_id}")
+    public List<ReservationHistoryDto> getReservationHistory(@PathVariable("u_id") int u_id){
+        try {
+            return reservationService.getReservationHistory(u_id);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
 }
