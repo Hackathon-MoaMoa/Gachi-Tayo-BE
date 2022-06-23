@@ -43,5 +43,11 @@
         )
     </insert>
 
+    <select id="getPostDetail" parameterType="int" resultType="PostDetailDto">
+        SELECT p_id, DATE_FORMAT(start_date, '%Y-%m-%d %H:%i') as start_date, start_x, start_y, start_name, start_address, end_x, end_y, end_name, end_address, total_member, (total_member-current_member) as remain_member
+        FROM POST
+        WHERE p_id=#{p_id}
+    </select>
+
 
 </mapper>
