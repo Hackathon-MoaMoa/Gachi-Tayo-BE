@@ -44,4 +44,14 @@
                  INNER JOIN USER U on U.u_id = M.u_id
         WHERE p_id = #{p_id}
     </select>
+
+    <select id="getReservationStatus" parameterType="reservationDto" resultType="int">
+        SELECT done FROM POST WHERE p_id = #{p_id}
+    </select>
+
+    <update id="updateReservationStatus" parameterType="reservationDto">
+        update POST
+        SET current_member = POST.current_member + 1, done = case when current_member >= POST.total_member then 1 else 0 end
+        WHERE p_id = #{p_id};
+    </update>
 </mapper>

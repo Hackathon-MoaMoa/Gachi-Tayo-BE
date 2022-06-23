@@ -15,7 +15,13 @@ public class ReservationController {
 
     @PostMapping("/api/reservation")
     public boolean createReservation(@RequestBody ReservationDto reservationDto){
-        return reservationService.createReservation(reservationDto);
+        try {
+            System.out.println(reservationDto);
+            return reservationService.createReservation(reservationDto);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            return false;
+        }
     }
 
     @GetMapping("/api/reservation/history/{u_id}")

@@ -24,7 +24,20 @@ public class ReservationServiceImpl implements ReservationService{
             return false;
         };
 
+        // 예약 완료된 상태이면 X
+        if (reservationMapper.getReservationStatus(reservationDto)==1) {
+            return false;
+        }
+
+        // TODO: 트랜잭션 처리
+        // member에 추가
         reservationMapper.createReservation(reservationDto);
+
+        // 예약 인원 +1
+        reservationMapper.updateReservationStatus(reservationDto);
+
+        // TODO: Done update -> 트리거로 처리함
+
         return true;
     }
 

@@ -13,4 +13,6 @@ public interface ReservationMapper {
     public int getReservationExists(ReservationDto reservationDto);
     public List<ReservationHistoryDto> getReservationHistory(int u_id);
     public List<ReservationUserDto> getReservationUserInfo(int p_id);
+    public int getReservationStatus(ReservationDto reservationDto);
+    public void updateReservationStatus(ReservationDto reservationDto);
 }
