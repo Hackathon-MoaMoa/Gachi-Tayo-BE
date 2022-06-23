@@ -15,7 +15,8 @@ public class UserController {
 
     @PutMapping("/api/user/signup")
     public int insertUser(@RequestBody UserDto userDto){
-        return userService.insertUser(userDto);
+        userService.insertUser(userDto);
+        return userDto.getUId();
     }
 
     @PostMapping("/api/user/certificate")
