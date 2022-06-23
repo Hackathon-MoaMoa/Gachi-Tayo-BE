@@ -37,4 +37,15 @@ public class PostController {
         return postService.getRemainSeat(p_id);
     }
 
+    @GetMapping("api/posts")
+    public List<PostDto> getPosts(PostSearchDto postSearchDto){
+        System.out.println(postSearchDto.toString());
+        if (postSearchDto.getStartAddress()==null && postSearchDto.getEndAddress()==null){
+            return postService.getAllPosts();
+        }
+        else{
+            return postSearchService.getSearchedPosts(postSearchDto);
+        }
+
+    }
 }
