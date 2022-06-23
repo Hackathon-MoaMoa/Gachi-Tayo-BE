@@ -10,5 +10,4 @@ public class PostXYDto {
     private double endY;
     private int radius;
 
-
 }

@@ -108,5 +108,17 @@ public class PostSearchServiceImpl implements PostSearchService {
         return postMapper.getSearchedPosts(postXYDto);
     }
 
+    public ArrayList<PostDto> getLonLat(PostSearchDto postSearchDto){
+        ArrayList<Double> coordinate=new ArrayList<>();
+        coordinate=getAllCoordinate(postSearchDto.getStartAddress(),postSearchDto.getEndAddress());
+        PostXYDto postXYDto = new PostXYDto();
+        postXYDto.setStartX(coordinate.get(0));
+        postXYDto.setStartY(coordinate.get(1));
+        postXYDto.setEndX(coordinate.get(2));
+        postXYDto.setEndY(coordinate.get(3));
+        postXYDto.setRadius(postSearchDto.getRadius());
+        return postMapper.getSearchedPosts(postXYDto);
+    }
+
 }
 

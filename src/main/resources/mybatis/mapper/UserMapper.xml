@@ -36,8 +36,8 @@
         SELECT * FROM USER WHERE id=#{id} and password=#{password}
     </select>
 
-    <update id="plus_score" parameterType="int">
+    <update id="plus_score" parameterType="UserRatingDto">
         update USER
-        SET score = USER.score + plus_score WHEN u_id = #{u_id}
+        SET score = USER.score + #{plus_score} WHEN u_id = #{u_id}
     </update>
 </mapper>

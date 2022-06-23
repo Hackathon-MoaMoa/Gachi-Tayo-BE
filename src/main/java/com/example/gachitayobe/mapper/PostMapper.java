@@ -15,6 +15,7 @@ public interface PostMapper {
     public List<Integer> getRemainSeat(int p_id);
     List<PostDto> getAllPosts();
     ArrayList<PostDto> getSearchedPosts(PostXYDto postXYDto);
+    ArrayList<PostDto> getLonLat(PostXYDto postXYDto);
     public void postWrite(PostDto postDto);
 
 }

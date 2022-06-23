@@ -9,5 +9,5 @@ public interface PostSearchService {
     ArrayList<Double> getCoordinate(String query);
     ArrayList<Double> getAllCoordinate(String start_address, String end_address);
     ArrayList<PostDto> getSearchedPosts(PostSearchDto postSearchDto);
-
-    }
+    ArrayList<PostDto> getLonLat(PostSearchDto postSearchDto);
+}
