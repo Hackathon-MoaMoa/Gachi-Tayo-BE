@@ -24,4 +24,12 @@ public class UserController {
     public String sendCertificationMessage(@RequestBody PhoneDto phoneDto){
         return userService.sendCertificationMessage(phoneDto.getPhone());
     }
+    //json으로 처리
+    /*public String sendCertificationMessage(@RequestBody String str) throws ParseException {
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObject = (JSONObject) parser.parse(str);
+        System.out.println(jsonObject.get("phone"));
+        String phone=jsonObject.get("phone").toString();
+        return userService.sendCertificationMessage(phone);
+    }*/
 }
