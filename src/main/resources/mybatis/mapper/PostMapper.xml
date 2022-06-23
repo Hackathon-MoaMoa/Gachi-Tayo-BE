@@ -23,24 +23,24 @@
         , created_at
     </sql>
 
-    <insert id="postWrite" parameterType="PostDto">
+    <insert id="insertPost" parameterType="PostDto">
         INSERT INTO POST (
         <include refid="postColumns" />
         ) VALUES (
         NULL
-        , #{uId}
-        , #{startX}
-        , #{startY}
-        , #{startAddress}
-        , #{startName}
-        , #{endX}
-        , #{endY}
-        , #{endAddress}
-        , #{endName}
-        , #{startDate}
-        , #{totalMember}
-        , #{currentMember}
-        , #{done}
+        , uId
+        , startX
+        , startY
+        , startAddress
+        , startName
+        , endX
+        , endY
+        , endAddress
+        , endName
+        , startDate
+        , totalMember
+        , currentMember
+        , done
         )
     </insert>
 
@@ -54,33 +54,17 @@
         SELECT seat_number FROM SEAT_NUMBER WHERE seat_number not in (SELECT seat_number FROM MEMBER WHERE p_id=#{p_id});
     </select>
 
-<<<<<<< HEAD
-=======
     <select id="getAllPosts" resultType="PostDto">
         SELECT * FROM POST order by created_at desc ;
     </select>
 
->>>>>>> 858bf2eceda4f2bf1cf45e586f73e743a2bbd36f
     <select id="getSearchedPosts" parameterType="PostXYDto" resultType="PostDto">
         select *,(6371*acos(cos(radians(#{startY}))*cos(radians(start_y))*cos(radians(start_x)-radians(#{startX}))
         +sin(radians(#{startY}))*sin(radians(start_y)))) AS distance
         , (6371*acos(cos(radians(#{endY}))*cos(radians(end_y))*cos(radians(end_x)-radians(#{endX}))
-<<<<<<< HEAD
-        +sin(radians(#{endY}))*sin(radians(end_y)))) AS distance
-        from POST
-    </select>
-    <!--
-        <update id="postWrite" parameterType="int">
-            UPDATE POST
-             set startX = 아직 못채움
-        WHERE startAddress = #{startAddress} and endAddress = #{endAddress}
-    </update>
-    -->
-=======
         +sin(radians(#{endY}))*sin(radians(end_y)))) AS distancea
         from POST
         having distance <![CDATA[ <= ]]> #{radius} and distancea <![CDATA[ <= ]]> #{radius};
     </select>
->>>>>>> 858bf2eceda4f2bf1cf45e586f73e743a2bbd36f
 
 </mapper>
