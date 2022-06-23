@@ -2,6 +2,7 @@ package com.example.gachitayobe.controller;
 
 import com.example.gachitayobe.dto.PhoneDto;
 import com.example.gachitayobe.dto.UserDto;
+import com.example.gachitayobe.dto.UserLoginDto;
 import com.example.gachitayobe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,4 +33,9 @@ public class UserController {
         String phone=jsonObject.get("phone").toString();
         return userService.sendCertificationMessage(phone);
     }*/
+
+    @PostMapping("api/user/login")
+    public int loginUser(@RequestBody UserLoginDto userLoginDto){
+        return userService.checkUser(userLoginDto);
+    }
 }
