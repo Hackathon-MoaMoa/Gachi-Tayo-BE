@@ -2,6 +2,10 @@ package com.example.gachitayobe.service;
 
 import com.example.gachitayobe.dto.PostDetailDto;
 import com.example.gachitayobe.dto.PostDto;
+<<<<<<< HEAD
+=======
+import com.example.gachitayobe.dto.PostSearchDto;
+>>>>>>> 858bf2eceda4f2bf1cf45e586f73e743a2bbd36f
 import com.example.gachitayobe.mapper.PostMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +32,10 @@ public class PostServiceImpl implements PostService {
 
     public List<PostDto> getAllPosts(){ return postMapper.getAllPosts(); }
 
+<<<<<<< HEAD
     public void postWrite(@RequestBody PostDto postDto) {
         postMapper.postWrite(postDto);
     }
+=======
+>>>>>>> 858bf2eceda4f2bf1cf45e586f73e743a2bbd36f
 }

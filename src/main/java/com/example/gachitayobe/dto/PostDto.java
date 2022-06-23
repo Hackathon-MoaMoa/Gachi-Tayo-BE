@@ -1,10 +1,12 @@
 package com.example.gachitayobe.dto;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.sql.Timestamp;
 
 @Getter
+@Setter
 public class PostDto {
     private int uId;
     private int pId;
