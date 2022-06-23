@@ -67,7 +67,7 @@
         having distance <![CDATA[ <= ]]> #{radius} and distance <![CDATA[ <= ]]> #{radius};
     </select>
 
-    <update id="getLonLat" parameterType="PostSYDto">
+    <update id="getLonLat" parameterType="PostXYDto">
         UPDATE POST
         SET startX = #{startX}, startY = #{startY}, endX = #{endX}, endY = #{endY}
     </update>
