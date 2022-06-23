@@ -49,5 +49,8 @@
         WHERE p_id=#{p_id}
     </select>
 
+    <select id="getRemainSeat" parameterType="int" resultType="int">
+        SELECT seat_number FROM SEAT_NUMBER WHERE seat_number not in (SELECT seat_number FROM MEMBER WHERE p_id=#{p_id});
+    </select>
 
 </mapper>
