@@ -10,6 +10,6 @@ public interface PostService {
     PostDetailDto getPostDetail(int p_id);
     List<Integer> getRemainSeat(int p_id);
     List<PostDto> getAllPosts();
-    void postWrite(postDto postDto);
+    void postWrite(PostDto postDto);
 
 }

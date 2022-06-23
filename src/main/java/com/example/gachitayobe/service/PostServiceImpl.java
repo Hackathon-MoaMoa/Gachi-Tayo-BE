@@ -6,6 +6,7 @@ import com.example.gachitayobe.dto.PostSearchDto;
 import com.example.gachitayobe.mapper.PostMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class PostServiceImpl implements PostService {
 
     public List<PostDto> getAllPosts(){ return postMapper.getAllPosts(); }
 
-    public void postWrite(@RequestBody postDto posDto) {
+    public void postWrite(@RequestBody PostDto postDto) {
         postMapper.postWrite(postDto);
     }
 
