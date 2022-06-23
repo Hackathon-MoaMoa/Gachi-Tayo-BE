@@ -6,6 +6,8 @@ import com.example.gachitayobe.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("*")
 public class PostController {
@@ -20,5 +22,10 @@ public class PostController {
     @GetMapping("/api/posts/{p_id}")
     public PostDetailDto getPostDetail(@PathVariable("p_id") int p_id){
         return postService.getPostDetail(p_id);
+    }
+
+    @GetMapping("/api/posts/seat/{p_id}")
+    public List<Integer> getRemainSeat(@PathVariable("p_id") int p_id){
+        return postService.getRemainSeat(p_id);
     }
 }
