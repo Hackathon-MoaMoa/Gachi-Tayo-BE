@@ -21,5 +21,8 @@
         )
     </insert>
 
+    <select id="getReservationExists" parameterType="reservationDto" resultType="int">
+        select EXISTS(SELECT * FROM MEMBER WHERE p_id=#{p_id} and u_id=#{u_id}) as exist;
+    </select>
 
 </mapper>

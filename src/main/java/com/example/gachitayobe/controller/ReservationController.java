@@ -13,7 +13,7 @@ public class ReservationController {
     private ReservationService reservationService;
 
     @PostMapping("/api/reservation")
-    public int createReservation(@RequestBody ReservationDto reservationDto){
+    public boolean createReservation(@RequestBody ReservationDto reservationDto){
         return reservationService.createReservation(reservationDto);
     }
 }

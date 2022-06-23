@@ -14,7 +14,14 @@ public class ReservationServiceImpl implements ReservationService{
         this.reservationMapper = reservationMapper;
     }
 
-    public int createReservation(ReservationDto reservationDto){
-        return reservationMapper.createReservation(reservationDto);
+    public boolean createReservation(ReservationDto reservationDto){
+
+        // 이미 예약했으면 X
+        if(reservationMapper.getReservationExists(reservationDto)==1){
+            return false;
+        };
+
+        reservationMapper.createReservation(reservationDto);
+        return true;
     }
 }

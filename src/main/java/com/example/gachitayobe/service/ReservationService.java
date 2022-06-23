@@ -3,5 +3,5 @@ package com.example.gachitayobe.service;
 import com.example.gachitayobe.dto.ReservationDto;
 
 public interface ReservationService {
-    int createReservation(ReservationDto reservationDto);
+    boolean createReservation(ReservationDto reservationDto);
 }
