@@ -31,7 +31,7 @@
 
 
 ## 6. 프로젝트 목표
-![프로젝트 주제 (1)](https://user-images.githubusercontent.com/75000923/175468634-1bb0bf1b-5084-4d07-95d1-f609fd55a323.png)
+![프로젝트 목표 (1)](https://user-images.githubusercontent.com/75000923/175472963-6eb3ef85-f030-424d-862e-2f0774d11286.png)
 
 
 ## 7. 프로세스 및 플로우 차트
