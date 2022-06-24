@@ -39,7 +39,7 @@
 
 
 ## 8. 디자인 Asset
-![디자인](https://user-images.githubusercontent.com/75000923/175471184-786474c3-0f23-40fe-a27a-5c5c397d2d45.png)
+![디자인 에셋](https://user-images.githubusercontent.com/75000923/175473435-5fb44702-b46d-4c0d-b66b-7fa589a4cfd3.png)
 
 
 ## 9. 프로젝트 주 기능
