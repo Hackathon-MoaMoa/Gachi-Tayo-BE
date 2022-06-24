@@ -80,10 +80,8 @@
 
 
 ## 11. 시연 영상
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PWQDfj7aAOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* https://www.youtube.com/embed/PWQDfj7aAOI
 
 
 ## 12. 최종 발표 영상
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eCJD5tn4LSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+* https://www.youtube.com/embed/eCJD5tn4LSo
