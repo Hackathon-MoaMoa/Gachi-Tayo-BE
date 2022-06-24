@@ -7,7 +7,7 @@
 ![팀소개2](https://user-images.githubusercontent.com/75000923/175468337-22375c8c-e1ac-4b59-b0eb-3a1e71600589.png)
 
 
-## 가치타자: 택시 동승자를 찾는 웹 플랫폼
+## 프로젝트 소개- 가치타자: 택시 동승자를 찾는 웹 플랫폼
 ![프로젝트 주제 (1)](https://user-images.githubusercontent.com/75000923/175468634-1bb0bf1b-5084-4d07-95d1-f609fd55a323.png)
 
 
