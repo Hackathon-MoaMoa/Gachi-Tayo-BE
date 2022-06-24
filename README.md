@@ -30,19 +30,19 @@
 ![차별점(장점)1](https://user-images.githubusercontent.com/75000923/175471817-ef44be88-1111-4315-b8d7-de7bba609db2.png)
 
 
-## 6. 프로젝트 목표
-![프로젝트 목표 (1)](https://user-images.githubusercontent.com/75000923/175472963-6eb3ef85-f030-424d-862e-2f0774d11286.png)
-
-
-## 7. 프로세스 및 플로우 차트
+## 6. 프로세스 및 플로우 차트
 ![프로세스, 플로우](https://user-images.githubusercontent.com/75000923/175470095-850a5e5d-ac2e-480a-b07c-0a416e85d003.png)
 
 
-## 8. 기술 스택
+## 7. 기술 스택
 ![협업툴](https://user-images.githubusercontent.com/75000923/175469754-7191815f-01e3-475c-8854-ccfdbfbb60da.png)
 
 
-## 9. 주 기능
+## 8. 프로젝트 주 기능
+![프로젝트 목표 (1)](https://user-images.githubusercontent.com/75000923/175472963-6eb3ef85-f030-424d-862e-2f0774d11286.png)
+
+
+## 9. 주 기능 소개
 ### 1) 가치타기: 게시물을 조회하고 원하는 합승을 예약하기
 * 출발지, 도착지 선택
 * 원하는 반경 선택(출발지, 목적지 각각에 대해 반경이 설정되어 게시글이 필터링 됨)
