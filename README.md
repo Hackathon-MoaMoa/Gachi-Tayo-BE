@@ -42,6 +42,15 @@
 ![협업툴](https://user-images.githubusercontent.com/75000923/175469754-7191815f-01e3-475c-8854-ccfdbfbb60da.png)
 
 
+### 1) API 설계
+<img width="1049" alt="API 명세" src="https://user-images.githubusercontent.com/75000923/175486454-f1e6e240-92bf-4057-baec-c97c83442c2e.png">
+
+
+### 2) ERD
+<img width="814" alt="ERD" src="https://user-images.githubusercontent.com/75000923/175487233-fdda0eb1-a873-4295-a7cc-4b1672c74829.png">
+
+
+
 ## 8. 디자인 Asset
 ![디자인 에셋](https://user-images.githubusercontent.com/75000923/175473435-5fb44702-b46d-4c0d-b66b-7fa589a4cfd3.png)
 
