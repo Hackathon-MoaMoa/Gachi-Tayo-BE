@@ -38,11 +38,15 @@
 ![협업툴](https://user-images.githubusercontent.com/75000923/175469754-7191815f-01e3-475c-8854-ccfdbfbb60da.png)
 
 
-## 8. 프로젝트 주 기능
+## 8. 디자인 Asset
+![디자인](https://user-images.githubusercontent.com/75000923/175471184-786474c3-0f23-40fe-a27a-5c5c397d2d45.png)
+
+
+## 9. 프로젝트 주 기능
 ![프로젝트 목표 (1)](https://user-images.githubusercontent.com/75000923/175472963-6eb3ef85-f030-424d-862e-2f0774d11286.png)
 
 
-## 9. 주 기능 소개
+## 10. 주 기능 소개
 ### 1) 가치타기: 게시물을 조회하고 원하는 합승을 예약하기
 * 출발지, 도착지 선택
 * 원하는 반경 선택(출발지, 목적지 각각에 대해 반경이 설정되어 게시글이 필터링 됨)
@@ -69,10 +73,6 @@
 ### 4) 회원 가입시 본인 인증 절차: 회원 가입시 사용자의 휴대폰 번호로 본인 인증하기
 * 입력한 휴대폰 번호로 문자가 전송되고, 올바른 인증 번호 입력해야 회원 가입 완료
 ![로그인](https://user-images.githubusercontent.com/75000923/175469663-1bbb2b50-f7f4-41ec-9f07-2f6f3f3b32bb.png)
-
-
-## 10. 디자인 Asset
-![디자인](https://user-images.githubusercontent.com/75000923/175471184-786474c3-0f23-40fe-a27a-5c5c397d2d45.png)
 
 
 
