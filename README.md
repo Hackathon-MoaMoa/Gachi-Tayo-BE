@@ -35,6 +35,10 @@
 
 
 ## 7. 기술 스택
+* [BE] Spring boot, Mybatis
+* [BE] Mysql
+* [BE] Kakao 로컬 API- 도로명 주소 -->위도, 경도 좌표 변환
+* [BE] CoolSMS API- 휴대폰 본인 인증
 ![협업툴](https://user-images.githubusercontent.com/75000923/175469754-7191815f-01e3-475c-8854-ccfdbfbb60da.png)
 
 
@@ -74,5 +78,12 @@
 * 입력한 휴대폰 번호로 문자가 전송되고, 올바른 인증 번호 입력해야 회원 가입 완료
 ![로그인](https://user-images.githubusercontent.com/75000923/175469663-1bbb2b50-f7f4-41ec-9f07-2f6f3f3b32bb.png)
 
+
+## 11. 시연 영상
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PWQDfj7aAOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## 12. 최종 발표 영상
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eCJD5tn4LSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
